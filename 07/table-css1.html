@@ -4,19 +4,68 @@
 		<meta charset="UTF-8">
 		<title>표 스타일</title>
     <style>
-			table {
-				caption-side: bottom;  /* 표 캡션 위치 */
-				border:1px solid black;  /* 표 테두리는 검은 색 실선으로 */
+			body {
+				background-color: #f0f0f0; /* Light gray background */
+				font-family: 'Arial', sans-serif; /* Custom font */
+				margin: 0;
 			}
-			td, th {
-				border:1px dotted black;  /* 셀 테두리는 검은 색 점선으로 */
-				padding:10px;  /* 셀 테두리와 내용 사이의 여백 */
-				text-align:center;  /* 셀 내용 가운데 정렬 */
+		
+			#container {
+				width: 650px;
+				margin: 20px auto;
+				padding: 20px; /* Increased padding for better spacing */
+				border: 1px solid #ccc;
+				background-color: #fff; /* White background for container */
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+			}
+		
+			h2 {
+				text-align: center;
+				color: #333; /* Dark text color */
+			}
+		
+			table {
+				caption-side: top;
+				border: 1px solid #333;
+				margin: auto;
+				background-color: #fff; /* White background for table */
+				border-collapse: collapse; /* Remove spacing between table cells */
+			}
+		
+			td,
+			th {
+				border: 1px dotted #333;
+				padding: 15px;
+				text-align: center;
+			}
+		
+			input {
+				width: 100px;
+				text-align: center;
+			}
+		
+			nav#submit {
+				text-align: center;
+				margin-top: 20px;
+			}
+		
+			button {
+				padding: 10px 20px;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background-color 0.3s ease; /* Smooth background color transition */
+			}
+		
+			button:hover {
+				background-color: #333; /* Darker background color on hover */
+				color: #fff; /* White text color on hover */
 			}
 		</style>
+		
 	</head>
 	<body>		
-		<h2>상품 구성</h2>
+		<div id="container">
+		<h2 style="text-align: center;">상품 구성</h2>
 		<table>
 			<caption>선물용과 가정용 상품 구성</caption>
 			<thead>
@@ -25,6 +74,7 @@
 					<th>중량</th>
 					<th>갯수</t>
 					<th>가격</th>
+					<th>선택</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -33,24 +83,33 @@
 					<td>3kg</td>
 					<td>11~16과</td>
 					<td>35,000원</td>
+					<td><input type="number" min="0" max="5" id="p3" placeholder="0 ~ 5" required> 개</td>
 				</tr>
 				<tr>
 					<td>5kg</td>
 					<td>18~26과</td>
 					<td>52,000원</td>
+					<td><input   type="number" min="0" max="5" id="p5" placeholder="0 ~ 5" required> 개</td>
 				</tr>
 				<tr>
 					<td rowspan="2">가정용</td>
 					<td>3kg</td>
 					<td>11~16과</td>
 					<td>30,000원</td>
+					<td><input  type="number" min="0" max="5" id="f3" placeholder="0 ~ 5" required> 개</td>
 				</tr>   
 				<tr>
 					<td>5kg</td>
 					<td>18~26과</td>
 					<td>47,000원</td>
+					<td><input   type="number" min="0" max="5" id="f5" placeholder="0 ~ 5" required> 개</td>
 				</tr>
 			</tbody>        
 		</table>
+		<nav id="submit">
+			<button type="submit" >주문하기</button>
+			<button type="reset">취소하기</button>
+		</nav>
+	</div>
 	</body>
 </html>
