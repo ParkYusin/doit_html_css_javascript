@@ -4,14 +4,31 @@
   padding:0;
 }  
 #contents {
- background:url("../images/bg.jpg") no-repeat;
- background-size:cover;
- width:800px;
- height:500px;
- margin:0 auto;
+border-top-right-radius: 20%;
+border-top-left-radius: 10%;
+ background:url("../images/back.PNG") no-repeat;
+ width:700px;
+ height:400px;
+ margin:100px auto 10px auto;
+ position: relative;
+
+
 }
 h1 { 
   color:#fff; 
   font-size:120px;
-  text-shadow: 2px 3px 0 #000;      
+  text-shadow: 10px 10px 5px #ddd;     
+  position: absolute;
+  bottom: 30px;
+  left: 250px;
+}
+#table{
+  margin: 20px auto;
+  width: 1000px;
+  height: 50px;
+}
+.nav {
+  border: 5px solid #fff;
+  border-radius: 15px 15px;
+  background-color: #eee;
 }

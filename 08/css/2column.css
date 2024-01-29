@@ -3,3 +3,36 @@
   padding:0;
   box-sizing: border-box;
 }
+#container {
+  width: 1200px;
+  margin: 20px auto;
+}
+#header {
+  height: 120px;
+  width: 100%;
+  background-color: #acacca;
+}
+#lside {
+  float: left;
+  width: 250px;
+  height: 600px;
+  background-color: #e9e9e9;
+}
+#contents {
+  width: 800px;
+  height: 600px;
+  background-color: #f7f7f7;
+  float: left;
+}
+#rside {
+  float: right;
+  width: 150px;
+  height: 600px;
+  background-color: #e9e9e9;
+}
+#footer {
+  width: 100%;
+  height: 100px;
+  background-color: #acacac;
+  clear: left;
+}
