@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 게임</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #story {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #choices {
+            display: flex;
+            justify-content: center;
+        }
+
+        .choice-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .choice-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="story">게임을 시작합니다. 어떤 선택을 하시겠습니까?</div>
+    <div id="choices">
+        <button class="choice-button" onclick="makeChoice(1)">선택지 1</button>
+        <button class="choice-button" onclick="makeChoice(2)">선택지 2</button>
+    </div>
+
+    <script>
+        function makeChoice(choice) {
+            var storyElement = document.getElementById('story');
+            var choicesElement = document.getElementById('choices');
+
+            if (choice === 1) {
+                storyElement.innerHTML = "선택지 1을 선택했습니다. 이어지는 이야기를 입력하세요.";
+                // 이어지는 이야기에 대한 처리를 추가할 수 있습니다.
+            } else if (choice === 2) {
+                storyElement.innerHTML = "선택지 2를 선택했습니다. 이어지는 이야기를 입력하세요.";
+                // 이어지는 이야기에 대한 처리를 추가할 수 있습니다.
+            }
+
+            // 새로운 선택지를 추가하거나 현재 선택지를 변경할 수 있습니다.
+            choicesElement.innerHTML = `
+                <button class="choice-button" onclick="makeChoice(3)">새로운 선택지 1</button>
+                <button class="choice-button" onclick="makeChoice(4)">새로운 선택지 2</button>
+            `;
+        }
+    </script>
+</body>
+</html>
