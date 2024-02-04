@@ -7,6 +7,18 @@
 </head>
 <body>
   <h1>자리 배치도</h1>
-    
+  <script>
+    let menNum = prompt("몇 명인가요?");
+    let colNum = prompt("한 줄에 몇명씩 앉나요?");
+    let rowNum;
+
+    if (menNum % colNum == 0) {
+      rowNum = menNum / colNum;
+  }
+    else {
+      rowNum = parseInt(menNum / colNum) + 1;
+    }
+    alert( "가로줄은 " + rowNum + "줄")
+  </script>
 </body>
 </html>
