@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tel = $_POST["tel"];
     $level = $_POST["level"];
 
-    $servername = "데이터베이스_서버";
-    $username = "데이터베이스_사용자";
-    $password_db = "데이터베이스_비밀번호";
-    $dbname = "데이터베이스_이름";
+    $servername = "127.0.0.1";
+    $username = "root";
+    $password_db = "azby9245azby!";
+    $dbname = "register";
 
     try {
         
