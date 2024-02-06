@@ -4,12 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>연습문제 1</title>
+	<style>
+		body {
+			text-align: center;
+			font-size: 1.2rem;
+		}
+	</style>
 </head>
 <body>
-	<h2>4의 배수일까 아닐까</h2>
+	<h2 style="text-align: center;">4의 배수일까 아닐까</h2>
 
 	<script>
-	
-	</script>
+	let num1 = prompt("숫자:" , 583);
+	let answer = "";
+	if (num1%4==0) {
+		answer = num1 + "은(는) 4의 배수가 맞습니다.";
+	}
+	else {
+		answer = num1 + "은(는) 4의 배수가 아닙니다.";
+	}
+	document.write(answer)
+	</script>	
 </body>
 </html>

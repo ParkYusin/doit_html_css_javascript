@@ -9,29 +9,63 @@
 			padding-top:20px;
 			text-align:center;
 		}
+		td {
+			background-color: #000;
+			border: #000;
+			border-collapse: collapse;
+			width: 10px;
+			height: 10px;
+		}
 	</style>
 </head>
 <body>
 	<h1>while문을 사용한 팩토리얼 계산</h1>
 
 	<script>
-			var n = prompt("숫자를 입력하세요.","10");
-			var msg = "";
+			let n = prompt("숫자를 입력하세요.","10");
+			let msg = "";
 
 			if (n !== null) {  // '취소' 버튼을 누르지 않았는지 체크
-				var nFact = 1;  // 결과 값
-				var i = 1;  // 카운터
-				
-				while(i <= n) {
-					nFact *= i;
-					i++;
+				if (!(isNaN(n))) {
+					let nFact = 1;  // 결과 값
+					let i = 1;  // 카운터
+					
+					while(i <= n) {
+						nFact *= i;
+						i++;
+					}
+					msg = n + "! = " + nFact;  // 결과 값을 표시할 문자열 
 				}
-				msg = n + "! = " + nFact;  // 결과 값을 표시할 문자열 
-			}
-			else
+				else {
+						msg = "숫자가 아닙니다."
+					}
+				} 
+			else {
 				msg = "값을 입력하지 않았습니다.";
-
+			}
 			document.write(msg);  // 결과 표시
+
+			document.write("<table>");
+    document.write("<tr>");
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+    document.write("<tr>");
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+    document.write("<tr>");
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+    document.write("<tr>");
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
+        document.write("<td>")
 	</script>
 </body>
 </html>
