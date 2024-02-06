@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/mystudy.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li>
+        <button class="mouseevent" onclick="styleElement('click')"> click </button>
+        <div class="apply" id="clickApply"></div>
+      </li>
+      <p id="clickText">사용자가 HTML 요소를 클릭할 때 이벤트가 발생합니다.</p> 
+      <li>
+        <button class="mouseevent" ondblclick="styleElement('dblclick')"> dblclick </button>
+        <div class="apply" id="dblclickApply"></div>
+      </li>
+      <p id="dblclickText">사용자가 HTML 요소를 더블클릭할 때 이벤트가 발생합니다.</p>
+      <li>
+        <button class="mouseevent" onmousedown="styleElement('mousedown')">mousedown </button>
+        <div class="apply" id="mousedownApply"></div>
+      </li>
+      <p id="mousedownText">사용자가 요소 위에서 마우스 버튼을 눌렀을 때 이벤트가 발생합니다.</p>
+      <li>
+        <button class="mouseevent" onmousemove="styleElement('mousemove')"> mousemove </button>
+        <div class="apply" id="mousemoveApply"></div>
+      </li>
+      <p id="mousemoveText">사용자가 요소 위에서 마우스 포인터를 움직일 때 이벤트가 발생합니다.</p>
+      <li>
+        <button class="mouseevent" onmouseover="styleElement('mouseover')"> mouseover </button>
+        <div class="apply" id="mouseoverApply"></div>
+      </li>
+      <p id="mouseoverText">마우스 포인터가 요소 위로 옮겨질 때 이벤트가 발생합니다.</p>
+      <li>
+        <button class="mouseevent" onmouseout="styleElement('mouseout')">mouseout</button>
+        <div class="apply" id="mouseoutApply"></div>
+      </li>
+      <p id="mouseoutText">마우스 포인터가 요소를 벗어날 때 이벤트가 발생합니다.</p>
+      <li>
+        <button class="mouseevent" onmouseup="styleElement('mouseup')">mouseup</button>
+        <div class="apply" id="mouseupApply"></div>
+      </li>
+      <p id="mouseupText">사용자가 요소 위에 놓인 마우스 버튼에서 손을 뗄 때 이벤트가 발생합니다.</p>
+    </ul>
+  </div>
+  <script>
+    function styleElement(id) {
+      var element = document.getElementById(id + "Apply");
+      var textElement = document.getElementById(id + "Text");
+      if (element && textElement) {
+        element.style.backgroundColor = 'black';
+        textElement.style.backgroundColor = 'black';
+      }
+    }
+  </script>
+</body>
+</html>
